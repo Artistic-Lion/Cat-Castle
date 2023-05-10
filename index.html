@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Silkscreen"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <div id="screendiv">
+    <div class="column" id="column1">
+      <h1>Cat Castle</h1>
+      <h2 id="coinCounter">0 Coins</h2>
+      <h2 id="cpsTracker">0 Coins per Second</h1>
+      <div id="catToClick" onclick="clickCat()"></div>
+      <div id="wardrobeGrid"></div>
+    </div>
+
+    <div class="column" id="column2">
+      <div id="tutMenu" onclick="tutorialMenu()"></div>
+      <div id="tutText" class="showTut">
+        <h1 class="tutH">Welcome To Cat Castle!</h1>
+        <p class="tutP">To play, just click the cat to increase your coin count!</p>
+        <p class="tutP">Upgrades can be purchased in the top right, and buildings are available at the bottom right.</p>
+        <p class="tutP">Your cat also has a wardroble below it, so feel free to try on a new look :3</p>
+        <p class="tutP">Click the question button to open and close this menu!</p>
+      </div>
+    </div>
+
+    <div class="column" id="column3">
+      <div id="shopGrid"></div>
+      <div id="buyOrSell">
+        <label class="buyOrSellButton">
+          <input type="radio" name="buyOrSell" id="buy" onclick="setToBuy()" checked="checked"> Buy
+        </label>
+        <label class="buyOrSellButton">
+          <input type="radio" name="buyOrSell" id="sell" onclick="setToSell()"> Sell
+        </label>
+      </div>
+      <div id="buildingGrid">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="scripts.js"></script>
+</body>

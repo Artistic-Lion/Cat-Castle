@@ -1,0 +1,332 @@
+/*Main Columns*/
+body {
+  background-color: #0cb2af;
+  overflow: hidden;
+}
+
+#screendiv {
+  image-rendering: pixelated;
+  display: flex;
+  flex-direction: row;
+  font-family: "Silkscreen", sans-serif;
+}
+
+.column {
+  height: 95vh;
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+#column1 {
+  width: 30%;
+}
+
+#column2 {
+  width: 30%;
+}
+
+#column3 {
+  width: 40%;
+}
+/*COLUMN 1*/
+
+#coinCounter {
+  margin: 4px;
+}
+
+#cpsTracker {
+  margin: 4px;
+}
+#catToClick {
+  margin: 0 10px 0 10px;
+  background-image: url("assets/cat_yellow_costume.png");
+  background-size: 256px;
+  height: 256px;
+  width: 256px;
+  margin: auto 4px auto 4px;
+  /*border-radius: 50%;
+  background-color: #f29222;
+  */
+  align-self: center;
+  cursor: url("assets/paw_cursor.png"), pointer;
+  transform: scale(1);
+  transition: transform 0.1s;
+}
+#catToClick:hover {
+  transition: transform 0.2s;
+  transform: scale(1.1, 1.1);
+}
+
+#catToClick:active {
+  transition: transform 0.1s;
+  transform: scale(0.9, 0.9);
+}
+
+/*Wardrobe Stuff*/
+#wardrobeGrid {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 200px;
+  padding: 4px;
+  margin-top: auto;
+  background-image: url("assets/wardrobe_image.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#wardrobeGrid:hover {
+  overflow-y: scroll;
+  background-image: none;
+  background-color: #724216;
+}
+
+.costumeCard {
+  visibility: hidden;
+  width: 92px;
+  height: 92px;
+  margin: 4px;
+  background-size: 92px;
+}
+
+#wardrobeGrid:hover .costumeCard {
+  visibility: visible;
+}
+/*COLUMN 2*/
+#column2 {
+  overflow-y: auto;
+}
+
+#tutMenu {
+  align-self: center;
+  height: 100px;
+  width: 200px;
+  background-image: url("assets/tutorial_button.png");
+  background-size: 200px 100px;
+  transform: scale(1);
+  transition: all 0.3s;
+  margin-bottom: 16px;
+}
+
+#tutMenu:hover {
+  transform: scale(1.065);
+  transition: all 0.3s;
+  cursor: url("assets/paw_cursor.png"), pointer;
+}
+
+#tutMenu:active {
+  transform: scale(0.9);
+  transition: all 0.2s;
+}
+
+#tutText {
+  user-select: none;
+  box-sizing: border-box;
+  padding: 0 24px;
+  width: 350px;
+  height: 350px;
+  position: fixed;
+  top: calc(50% - 225px);
+  left: calc(50% - 250px);
+  z-index: 9999;
+  background-image: url("assets/upgrade_box_background.png");
+  background-size: 350px;
+}
+
+.showTut {
+  visibility: visible;
+}
+
+.hideTut {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.tutP {
+  font-size: 14px;
+  color: #faf1df;
+}
+
+.tutH {
+  margin-top: 24px;
+  font-size: 26px;
+  color: #fac723;
+}
+
+.buildingVisual {
+  margin-bottom: 8px;
+  align-self: center;
+  visibility: collapse;
+  background-position: center;
+  background-size: cover;
+  height: 96px;
+  min-width: 100%;
+  max-width: 384px;
+}
+/*COLUMN 3*/
+
+/*Shop Grid*/
+#shopGrid {
+  margin-left: 2.5px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*
+  grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+  */
+}
+
+#shopGrid:hover {
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+}
+
+#shopGrid:hover .upgradeCard {
+  background-size: 128px;
+  width: 128px;
+  height: 128px;
+}
+
+/*Upgrade Cards*/
+.upgradeCard {
+  display: inline-block;
+  align-items: center;
+  margin: 5px;
+  width: 64px;
+  height: 64px;
+  background-size: 64px;
+  transition: transform 0.1s;
+}
+
+.upgradeCard:hover {
+  transition: transform 0.1s;
+  transform: scale(1.0625);
+}
+
+.upgradePurchased {
+  height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*Buy Or Sell Selector*/
+.buyOrSellButton {
+  font-size: 30px;
+  font-family: inherit;
+}
+
+/*Building Grid*/
+#buildingGrid {
+  position: sticky;
+  display: flex;
+  margin-top: 5px;
+  margin-left: 2.5px;
+  width: 100%;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: hidden;
+}
+
+/*Building Card*/
+.buildingCard {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-self: left;
+  width: 98%;
+  height: 100px;
+  width: 98%;
+  margin: 5px;
+  background-color: #724216;
+}
+
+.buildingCard:hover {
+  box-shadow: inset 0 0 0 8px #fac723;
+}
+
+.buildingImage {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-size: 100px;
+}
+
+.hidden {
+  visibility: collapse;
+}
+.visible {
+  visibility: visible;
+}
+
+/*Tooltips*/
+.tooltip {
+  user-select: none;
+  position: absolute;
+  z-index: 1000;
+  visibility: hidden;
+  float: left;
+  width: 350px;
+  height: inherit;
+  background-color: #5e2a0f;
+  -webkit-text-fill-color: white;
+}
+
+.upgradeCard:hover .tooltip {
+  visibility: visible;
+  transform: translateX(-355px);
+  transition: transform 0.25s;
+  /*transform: scale(calc(1 / 1.0625));*/
+}
+
+.buildingCard:hover .tooltip {
+  visibility: visible;
+  right: 0;
+  /*
+  transform: translatex(100px);
+  */
+}
+
+.tooltipHead {
+  padding: 5px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.tooltipText {
+  padding: 5px;
+  height: 55px;
+  font-size: 14px;
+}
+
+/*Overlays*/
+
+.overlay {
+  z-index: 100;
+  background-color: #404040;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+}
+
+.buildingCard .overlay {
+  position: relative;
+}
+
+.overlay.purchasable {
+  opacity: 0;
+}
