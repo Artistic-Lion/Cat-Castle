@@ -257,6 +257,9 @@ class Building {
     ) {
       document.getElementById(this.name + "Visual").classList.remove("hidden");
       document.getElementById(this.name + "Visual").classList.add("visible");
+    } else {
+      document.getElementById(this.name + "Visual").classList.remove("visible");
+      document.getElementById(this.name + "Visual").classList.add("hidden");
     }
     //show or hide the visuals for buildings in column 2 depending on if the building is owned
   }
