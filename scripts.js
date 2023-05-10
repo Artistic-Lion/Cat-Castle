@@ -258,10 +258,10 @@ class Building {
       document.getElementById(this.name + "Visual").classList.remove("hidden");
       document.getElementById(this.name + "Visual").classList.add("visible");
     } else if (
+      this.count == 0 &&
       document
         .getElementById(this.name + "Visual")
-        .classList.contains("visible") &&
-      this.count == 0
+        .classList.contains("visible")
     ) {
       document.getElementById(this.name + "Visual").classList.remove("visible");
       document.getElementById(this.name + "Visual").classList.add("hidden");
