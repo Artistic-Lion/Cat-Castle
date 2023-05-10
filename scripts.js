@@ -257,7 +257,12 @@ class Building {
     ) {
       document.getElementById(this.name + "Visual").classList.remove("hidden");
       document.getElementById(this.name + "Visual").classList.add("visible");
-    } else {
+    } else if (
+      document
+        .getElementById(this.name + "Visual")
+        .classList.contains("visible") &&
+      this.count == 0
+    ) {
       document.getElementById(this.name + "Visual").classList.remove("visible");
       document.getElementById(this.name + "Visual").classList.add("hidden");
     }
